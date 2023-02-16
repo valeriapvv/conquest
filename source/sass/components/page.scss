@@ -1,0 +1,20 @@
+@use "../variables" as var;
+@use "../mixins";
+
+.page {
+  @include mixins.font;
+  height: 100%;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-width: var.$mobile-width;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.page__main {
+  flex-grow: 1;
+}
