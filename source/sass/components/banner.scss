@@ -1,0 +1,112 @@
+@use "../variables" as var;
+@use "../mixins";
+
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 768px;
+  overflow: hidden;
+}
+
+.banner__content {
+  display: flex;
+  padding-left: 85px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner__title {
+  @include mixins.font(
+    var.$font-family-secondary,
+    45px,
+    1,
+  );
+  @include mixins.line-bar();
+
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 400;
+  color: var.$color-text-dark;
+}
+
+.banner__undertitle {
+  @include mixins.font(
+    var.$font-family-secondary,
+    30px,
+    1.33,
+  );
+
+  margin-bottom: 39px;
+  color: var.$color-text-dark;
+}
+
+.banner__text {
+  max-width: 260px;
+  margin: 0;
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.banner__link {
+  margin-top: 60px;
+  margin-right: auto;
+}
+
+.banner__image-wrapper {
+  position: relative;
+  width: 506px;
+  height: 768px;
+  font-family: var.$font-family-tertiary;
+
+  align-self: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, -50%);
+    z-index: -1;
+    width: 990px;
+    height: 944px;
+    border-radius: 50%;
+    background-image:
+      linear-gradient(to right, transparent 500px, #ffffff 500px),
+      linear-gradient(to top, var.$color-background-light, transparent);
+  }
+}
+
+.banner__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -49%);
+
+  max-width: none;
+}
+
+.banner__price {
+  position: absolute;
+  top: 140px;
+  left: -80px;
+  z-index: 1;
+
+  width: max-content;
+
+  @include mixins.line-bar(
+    $side: right,
+  );
+}
+
+.banner__product-description {
+  bottom: 120px;
+  right: -85px;
+  z-index: 1;
+
+  @include mixins.line-bar(
+    $side: left,
+  );
+
+  position: absolute;
+}

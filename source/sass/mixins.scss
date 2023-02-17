@@ -21,3 +21,21 @@
   font-size: 32px;
   line-height: 1.3;
 }
+
+@mixin line-bar(
+  $line-width: 50px,
+  $side: left,
+  $offset: -15px,
+) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.6em;
+    #{$side}: -$line-width + $offset;
+    width: $line-width;
+    height: 1px;
+    background-color: var.$color-special-3;
+  }
+}
