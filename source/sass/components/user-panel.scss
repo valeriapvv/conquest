@@ -1,0 +1,42 @@
+@use "../variables" as var;
+@use "../mixins";
+
+.user-panel {
+  @include mixins.list-style-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 170px;
+
+  color: var.$color-text-dark;
+}
+
+.user-panel__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+
+  &:hover .user-panel__icon {
+    color: var.$color-special-1;
+  }
+}
+
+
+.user-panel__added-count {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(5px);
+
+  min-width: 13px;
+  height: 13px;
+  padding: 2px 4px;
+
+  background-color: var.$color-special-2;
+  border-radius: 7px;
+
+  font-size: 8px;
+  text-align: center;
+}

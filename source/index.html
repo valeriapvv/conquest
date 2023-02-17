@@ -15,9 +15,56 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
-  <header class="header"></header>
+  <header class="header centralizer">
+    <a class="logo">
+      <img src="img/logo.svg" width="104" height="26" alt="Логотип &#171;Conquest&#187;">
+    </a>
+    <nav class="main-navigation">
+      <ul class="main-navigation__list">
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#">Каталог</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#">Акции</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#">Доставка</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="user-panel">
+      <li class="user-panel__item">
+        <a class="user-panel__link" href="#">
+          <span class="visually-hidden">Поиск</span>
+          <svg class="user-panel__icon" width="16" height="16" aria-hidden="true" focusable="false">
+            <use href="img/sprite.svg#search" />
+          </svg>
+        </a>
+      </li>
+      <li class="user-panel__item">
+        <a class="user-panel__link" href="#">
+          <span class="visually-hidden">Избранные товары</span>
+          <svg class="user-panel__icon"  width="21" height="18" aria-hidden="true" focusable="false">
+            <use href="img/sprite.svg#heart" />
+          </svg>
+          <span class="user-panel__added-count" aria-label="Количество товаров.">1</span>
+        </a>
+      </li>
+      <li class="user-panel__item">
+        <a class="user-panel__link" href="#">
+          <span class="visually-hidden">Корзина</span>
+          <svg class="user-panel__icon" width="18" height="16" aria-hidden="true" focusable="false">
+            <use href="img/sprite.svg#cart" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </header>
   <main class="page__main">
-    <h1 class="visually-hidden">Conquest - магазин швейцарских часов</h1>
+    <h1 class="visually-hidden">&#171;Conquest&#187; - магазин швейцарских часов</h1>
   </main>
   <footer class="footer"></footer>
 </body>

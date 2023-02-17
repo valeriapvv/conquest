@@ -1,0 +1,21 @@
+@use "../variables" as var;
+@use "../mixins";
+
+.main-navigation__list {
+  @include mixins.list-style-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+
+  font-size: 14px;
+}
+
+.main-navigation__link {
+  display: block;
+  padding: 16px 32px;
+
+  &:hover {
+    color: var.$color-special-1;
+  }
+}

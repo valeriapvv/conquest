@@ -1,0 +1,8 @@
+@use "../variables" as var;
+
+.centralizer {
+  width: 100%;
+  max-width: var.$desktop-width;
+  margin: 0 auto;
+  padding: 0 100px;
+}

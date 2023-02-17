@@ -1,11 +1,17 @@
 // fonts
-$font-family-primary: 'Roboto', 'Arial', sans-serif;
-$font-family-secondary: 'Playfair Display', 'Times New Roman', serif;
-$font-family-tertiary: 'Prata', 'Times New Roman', serif;
+$font-family-primary: "Roboto", "Arial", sans-serif;
+$font-family-secondary: "Playfair Display", "Times New Roman", serif;
+$font-family-tertiary: "Prata", "Times New Roman", serif;
 
 $font-size-default: 16px;
 $line-height-default: 1.5;
 
+// colors
+$color-text-dark: #1b1a17;
+$color-text-default: rgba($color-text-dark, 82%);
+$color-special-1: #d4b098;
+$color-special-2: #e6c8b4;
 
 // viewports
 $mobile-width: 320px;
+$desktop-width: 1366px;

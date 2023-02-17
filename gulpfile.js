@@ -116,7 +116,7 @@ const sprite = () => {
       inlineSvg: true,
     }))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img/vector'))
+    .pipe(gulp.dest('build/img'))
 }
 
 // Copy files
@@ -194,7 +194,7 @@ export default gulp.series(
     html,
     styles,
     // scripts,
-    // sprite,
+    sprite,
   ),
   gulp.series(
     server,

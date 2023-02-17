@@ -1,11 +1,14 @@
 // global
-@use "global/fonts.scss";
-@use "global/global.scss";
+@use "global/fonts";
+@use "global/global";
 
 // reused
-@use "components/visually-hidden.scss";
+@use "components/visually-hidden";
+@use "components/centralizer";
 
 
 // other
-@use "components/page.scss";
-
+@use "components/page";
+@use "components/header";
+@use "components/main-navigation";
+@use "components/user-panel";
