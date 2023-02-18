@@ -19,7 +19,7 @@
   @include mixins.font(
     var.$font-family-secondary,
     45px,
-    1,
+    1.33,
   );
   @include mixins.line-bar();
 
@@ -73,7 +73,7 @@
     border-radius: 50%;
     background-image:
       linear-gradient(to right, transparent 500px, #ffffff 500px),
-      linear-gradient(to top, var.$color-background-light, transparent);
+      linear-gradient(to top, var.$color-background-light-1, transparent);
   }
 }
 

@@ -1,0 +1,93 @@
+@use "../variables" as var;
+@use "../mixins";
+
+$text-horizontal-padding: 12px;
+$line-bar-width: 30px;
+$line-bar-offset: $line-bar-width + $text-horizontal-padding;
+
+$base-plate-size: 313px;
+
+.card {
+  padding: 40px 28px;
+
+  @include mixins.font(
+    var.$font-family-secondary,
+    14px,
+    1.7,
+  );
+
+  background-color: var.$color-background-extra-light;
+}
+
+.card__title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0 $text-horizontal-padding;
+
+  font-size: 1em;
+}
+
+.card__price {
+  display: block;
+  margin-bottom: 2px;
+  padding: 0 $text-horizontal-padding;
+
+  font-family: var.$font-family-tertiary;
+}
+
+.card__image-link {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &::before {
+    width: $base-plate-size;
+    height: $base-plate-size;
+    background-image: linear-gradient(to right, transparent, var.$color-background-light-2);
+  }
+
+  &::after {
+    $inner-plate-size: $base-plate-size - 3px;
+    width: $inner-plate-size;
+    height: $inner-plate-size;
+    background-color: #ffffff;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.6;
+      width: $base-plate-size;
+      height: $base-plate-size;
+    }
+  }
+}
+
+.card__image {
+  position: relative;
+  z-index: 1;
+}
+
+.card__link {
+  padding: 0 $text-horizontal-padding;
+  padding-left: $line-bar-offset + 18px;
+
+  @include mixins.line-bar(
+    $line-bar-width,
+    left,
+    $line-bar-offset,
+  );
+
+  font-size: 16px;
+  line-height: 1.33;
+}

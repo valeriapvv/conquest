@@ -6,7 +6,7 @@
 @use "components/visually-hidden";
 @use "components/centralizer";
 @use "components/button";
-
+@use "components/card";
 
 // other
 @use "components/page";
@@ -14,3 +14,4 @@
 @use "components/main-navigation";
 @use "components/user-panel";
 @use "components/banner";
+@use "components/catalog";
