@@ -61,7 +61,7 @@ $base-plate-size: 313px;
     $inner-plate-size: $base-plate-size - 3px;
     width: $inner-plate-size;
     height: $inner-plate-size;
-    background-color: #ffffff;
+    background-color: var.$color-background-extra-light;
   }
 
   &:hover {

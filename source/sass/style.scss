@@ -1,17 +1,28 @@
-// global
+//// Global
 @use "global/fonts";
 @use "global/global";
 
-// reused
+//// Reused
 @use "components/visually-hidden";
 @use "components/centralizer";
 @use "components/button";
-@use "components/card";
 
-// other
+//// Page
 @use "components/page";
+
+//// Sections
+// Header
 @use "components/header";
 @use "components/main-navigation";
 @use "components/user-panel";
+
+// Banner
 @use "components/banner";
+
+// Catalog
 @use "components/catalog";
+@use "components/card";
+
+// About
+@use "components/about";
+@use "components/slider";

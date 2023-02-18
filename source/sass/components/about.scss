@@ -1,0 +1,77 @@
+@use "../variables" as var;
+@use "../mixins";
+
+// Градиентый фон и круги
+$background-gradiend:
+  linear-gradient(
+    to right,
+    var.$color-background-light-3 468px,
+    var.$color-background-extra-light 468px,
+  );
+
+$background-small-circle-size: 366px;
+$background-small-circle-radius: calc($background-small-circle-size / 2);
+$small-circle:
+  radial-gradient(
+    transparent $background-small-circle-radius - 1px,
+    var.$color-special-1 $background-small-circle-radius - 1px,
+    var.$color-special-1 $background-small-circle-radius,
+    transparent $background-small-circle-radius,
+  );
+
+$background-big-circle-size: 744px;
+$background-big-circle-radius: calc($background-big-circle-size / 2);
+$big-circle:
+  radial-gradient(
+    transparent $background-big-circle-radius - 1px,
+    var.$color-special-1 $background-big-circle-radius - 1px,
+    var.$color-special-1 $background-big-circle-radius,
+    transparent $background-big-circle-radius,
+  );
+
+.about {
+  display: grid;
+  grid-template-columns: var.$slider-width 1fr;
+  gap: 70px;
+  padding: 52px 177px;
+
+  background-image:
+    $small-circle,
+    $big-circle,
+    $background-gradiend;
+  background-repeat: no-repeat;
+  background-size:
+    $background-small-circle-size $background-small-circle-size,
+    $background-big-circle-size $background-big-circle-size,
+    100% 100%;
+  background-position:
+    top -150px right -150px,
+    top 20px right -520px,
+    top left;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 380px;
+}
+
+.about__title {
+  @include mixins.title-default;
+
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.about__text {
+  margin: 0;
+  margin-bottom: 15px;
+
+  color: var.$color-background-dark;
+}
+
+.about__link {
+  margin-top: 30px;
+  margin-right: auto;
+}
