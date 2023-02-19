@@ -16,7 +16,7 @@
 </head>
 <body class="page__body">
   <header class="header centralizer">
-    <a class="logo">
+    <a class="logo" href="index.html">
       <img src="img/logo.svg" width="104" height="26" alt="Логотип &#171;Conquest&#187;">
     </a>
     <nav class="main-navigation">
@@ -129,7 +129,7 @@
       </ul>
     </section>
     <section class="about centralizer">
-      <div class="slider">
+      <div class="about__slider slider">
         <ul class="slider__list">
           <li class="slider__item slider__item--current">
             <img class="slider__image" src="img/desktop/slider-photo-1.jpg" width="521" height="414" alt="Циферблат швейцарских часов.">
@@ -157,7 +157,92 @@
         <a class="about__link button button--secondary" href="#">Смотреть каталог</a>
       </div>
     </section>
+    <section class="subscribe centralizer">
+      <div class="subscribe__content">
+        <h2 class="subscribe__title">Следите за нашими новостями</h2>
+        <p class="subscribe__text">Подписывайтесь на <b class="subscribe__highlight">@conquest_watch</b> в соцсетях и узнавайте о новинках и акциях первыми.</p>
+        <ul class="subscribe__socials socials">
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <span class="visually-hidden">Instagram</span>
+              <svg width="23" height="24">
+                <use href="img/sprite.svg#instagram"/>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <span class="visually-hidden">Facebook</span>
+              <svg width="12" height="22">
+                <use href="img/sprite.svg#facebook"/>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <span class="visually-hidden">Twitter</span>
+              <svg width="22" height="18">
+                <use href="img/sprite.svg#twitter"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="subscribe__gallary">
+        <li class="subscribe__image-container">
+          <img class="subscribe__image" src="img/desktop/gallary-photo-1.jpg" width="242" height="228" alt="Фото часов на руке.">
+        </li>
+        <li class="subscribe__image-container">
+          <img class="subscribe__image" src="img/desktop/gallary-photo-2.jpg" width="242" height="228" alt="Фото часов на руке.">
+        </li>
+        <li class="subscribe__image-container subscribe__image-container--large">
+          <img class="subscribe__image" src="img/desktop/gallary-photo-3.jpg" width="377" height="460" alt="Фото часов на руке.">
+        </li>
+      </ul>
+    </section>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="footer__wrapper centralizer">
+      <div class="footer__info">
+        <a class="logo footer__logo" href="index.html">
+          <img src="img/logo-light.svg" width="121" height="26" alt="Логотип &#171;Conquest&#187;">
+        </a>
+
+        <a class="footer__text" href="tel:+84994504797">8 (499) 450-47-97</a>
+        <a class="footer__text" href="mailto:info@conquest.watch.ru">info@conquest.watch.ru</a>
+      </div>
+
+      <div class="links-group">
+        <h2 class="links-group__title">О компании</h2>
+        <ul class="links-group__list">
+          <li class="links-group__item"><a class="links-group__link" href="#">Наши магазины</a></li>
+          <li class="links-group__item"><a class="links-group__link" href="#">Вакансии</a></li>
+          <li class="links-group__item"><a class="links-group__link" href="#">Сертификаты</a></li>
+          <li class="links-group__item"><a class="links-group__link" href="#">Отзывы</a></li>
+        </ul>
+      </div>
+
+      <div class="links-group">
+        <h2 class="links-group__title">Покупателям</h2>
+        <ul class="links-group__list">
+          <li class="links-group__item"><a class="links-group__link" href="#">Каталог товаров</a></li>
+          <li class="links-group__item"><a class="links-group__link" href="#">Как заказать?</a></li>
+          <li class="links-group__item"><a class="links-group__link" href="#">FAQ</a></li>
+          <li class="links-group__item"><a class="links-group__link" href="#">Корпоративным клиентам</a></li>
+        </ul>
+      </div>
+
+      <div class="links-group">
+        <h2 class="links-group__title">Оплата и доставка</h2>
+        <ul class="links-group__list">
+          <li class="links-group__item"><a class="links-group__link" href="#">Способы оплаты</a></li>
+          <li class="links-group__item"><a class="links-group__link" href="#">Время доставки</a></li>
+          <li class="links-group__item"><a class="links-group__link" href="#">Гарантии и ремонт</a></li>
+          <li class="links-group__item"><a class="links-group__link" href="#">Возврат и компенсация</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

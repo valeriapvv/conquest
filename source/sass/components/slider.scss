@@ -1,8 +1,6 @@
 @use "../variables" as var;
 @use "../mixins";
 
-$controls-height: 12px;
-
 .slider {
   position: relative;
 }
@@ -21,7 +19,9 @@ $controls-height: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: var.$slider-width;
+
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .slider__controls {

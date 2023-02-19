@@ -1,0 +1,53 @@
+@use "../variables" as var;
+@use "../mixins";
+
+.subscribe {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  padding-bottom: 90px;
+  color: var.$color-background-dark;
+}
+
+.subscribe__content {
+  max-width: 472px;
+  margin-right: 70px;
+  padding-top: 140px;
+  padding-bottom: 50px;
+}
+
+.subscribe__title {
+  @include mixins.title-default;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.subscribe__text {
+  max-width: 376px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.subscribe__socials {
+  margin-top: 90px;
+  margin-left: -10px;
+}
+
+.subscribe__gallary {
+  @include mixins.list-style-reset;
+
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-auto-rows: min-content;
+  grid-auto-flow: column dense;
+  gap: 10px;
+
+  min-width: fit-content;
+  max-width: 630px;
+}
+
+.subscribe__image-container {
+  &--large {
+    grid-row: span 2;
+  }
+}

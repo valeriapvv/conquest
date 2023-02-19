@@ -1,0 +1,31 @@
+@use "../variables" as var;
+@use "../mixins";
+
+.footer {
+  color: var.$color-text-light;
+  font-size: 12px;
+  line-height: 1.2;
+
+  background-color: var.$color-background-dark;
+}
+
+.footer__wrapper {
+  padding: 73px 185px 67px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.footer__text {
+  display: block;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

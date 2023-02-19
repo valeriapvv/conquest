@@ -1,0 +1,24 @@
+@use "../mixins";
+
+.links-group__title {
+  margin: 0;
+  margin-bottom: 33px;
+  padding-top: 6px;
+
+  font-size: 14px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.links-group__list {
+  @include mixins.list-style-reset;
+}
+
+.links-group__item {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

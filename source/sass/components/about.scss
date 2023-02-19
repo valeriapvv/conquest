@@ -30,9 +30,7 @@ $big-circle:
   );
 
 .about {
-  display: grid;
-  grid-template-columns: var.$slider-width 1fr;
-  gap: 70px;
+  display: flex;
   padding: 52px 177px;
 
   background-image:
@@ -48,6 +46,10 @@ $big-circle:
     top -150px right -150px,
     top 20px right -520px,
     top left;
+}
+
+.about__slider {
+  margin-right: 70px;
 }
 
 .about__content {

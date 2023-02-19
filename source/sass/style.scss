@@ -6,6 +6,7 @@
 @use "components/visually-hidden";
 @use "components/centralizer";
 @use "components/button";
+@use "components/socials";
 
 //// Page
 @use "components/page";
@@ -15,6 +16,10 @@
 @use "components/header";
 @use "components/main-navigation";
 @use "components/user-panel";
+
+// Footer
+@use "components/footer";
+@use "components/links-group";
 
 // Banner
 @use "components/banner";
@@ -26,3 +31,6 @@
 // About
 @use "components/about";
 @use "components/slider";
+
+// Subscribe
+@use "components/subscribe";

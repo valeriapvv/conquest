@@ -1,0 +1,28 @@
+@use "../variables" as var;
+@use "../mixins";
+
+.socials {
+  @include mixins.list-style-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  max-width: 140px;
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  &:hover {
+    color: var.$color-special-1;
+  }
+
+  &:active {
+    color: var.$color-special-5;
+    opacity: 0.6;
+  }
+}
