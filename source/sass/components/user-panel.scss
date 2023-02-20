@@ -6,13 +6,18 @@
 
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   max-width: 170px;
 
   color: var.$color-text-dark;
+
+  @media (max-width: var.$mobile-max-width) {
+    display: block;
+    background-color: rgba(var.$color-special-1, 0.1);
+  }
 }
 
 .user-panel__link {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +26,41 @@
   &:hover .user-panel__icon {
     color: var.$color-special-1;
   }
+
+  @media (max-width: var.$mobile-max-width) {
+    display: grid;
+    grid-template-columns: 23px auto;
+    column-gap: 15px;
+    align-items: center;
+    justify-items: end;
+
+    padding: 25px 50px;
+    padding-right: 85px;
+    border-bottom: 1px solid var.$color-special-2;
+  }
 }
 
+.user-panel__text {
+  @media (max-width: var.$mobile-max-width) {
+    position: static;
+    width: fit-content;
+    height: auto;
+
+    text-transform: uppercase;
+    color: var.$color-text-default;
+
+    justify-self: start;
+    order: 1;
+  }
+}
+
+.user-panel__icon-container {
+  position: relative;
+}
+
+.user-panel__icon {
+  display: block;
+}
 
 .user-panel__added-count {
   position: absolute;

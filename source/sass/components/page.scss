@@ -9,7 +9,7 @@
 .page__body {
   display: flex;
   flex-direction: column;
-  min-width: var.$mobile-width;
+  min-width: var.$mobile-min-width;
   min-height: 100%;
   margin: 0 auto;
   color: var.$color-text-default;

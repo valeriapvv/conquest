@@ -22,8 +22,14 @@ $color-background-extra-light: #fdfdfb;
 $color-background-dark: #444240;
 
 // viewports
-$mobile-width: 320px;
-$desktop-width: 1366px;
+$desktop-max-width: 1366px;
+$desktop-min-width: 1200px;
+
+$tablet-max-width: $desktop-min-width - 1px;
+$tablet-min-width: 768px;
+
+$mobile-max-width: $tablet-min-width - 1px;
+$mobile-min-width: 320px;
 
 // sizes
 $slider-width: 521px;

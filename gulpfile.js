@@ -193,7 +193,7 @@ export default gulp.series(
   gulp.parallel(
     html,
     styles,
-    // scripts,
+    scripts,
     sprite,
   ),
   gulp.series(
