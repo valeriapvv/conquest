@@ -1,7 +1,13 @@
+@use "../variables" as var;
+
 .header {
-  position: relative;
-  min-height: 85px;
   padding-top: 18px;
   padding-bottom: 18px;
   line-height: 1.2;
+
+  @media (max-width: var.$mobile-max-width) {
+    position: relative;
+    z-index: 2;
+    min-height: 62px;
+  }
 }

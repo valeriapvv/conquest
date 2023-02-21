@@ -3,7 +3,7 @@
 
 .button {
   display: inline-block;
-  max-width: 400px;
+  max-width: max(400px, 100%);
   margin: 0;
   padding: 26px 38px;
 
