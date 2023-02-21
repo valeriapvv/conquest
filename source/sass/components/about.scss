@@ -2,18 +2,14 @@
 @use "../mixins";
 
 // Градиентый фон и круги
-$background-gradiend:
-  linear-gradient(
-    to right,
+$background-gradiend: linear-gradient(to right,
     var.$color-background-light-3 468px,
     var.$color-background-extra-light 468px,
   );
 
 $background-small-circle-size: 366px;
 $background-small-circle-radius: calc($background-small-circle-size / 2);
-$small-circle:
-  radial-gradient(
-    transparent $background-small-circle-radius - 1px,
+$small-circle: radial-gradient(transparent $background-small-circle-radius - 1px,
     var.$color-special-1 $background-small-circle-radius - 1px,
     var.$color-special-1 $background-small-circle-radius,
     transparent $background-small-circle-radius,
@@ -21,9 +17,7 @@ $small-circle:
 
 $background-big-circle-size: 744px;
 $background-big-circle-radius: calc($background-big-circle-size / 2);
-$big-circle:
-  radial-gradient(
-    transparent $background-big-circle-radius - 1px,
+$big-circle: radial-gradient(transparent $background-big-circle-radius - 1px,
     var.$color-special-1 $background-big-circle-radius - 1px,
     var.$color-special-1 $background-big-circle-radius,
     transparent $background-big-circle-radius,
@@ -31,7 +25,7 @@ $big-circle:
 
 .about {
   display: flex;
-  padding: 52px 177px;
+  padding: 52px min(177px, 12.2vw);
 
   background-image:
     $small-circle,
@@ -46,10 +40,30 @@ $big-circle:
     top -150px right -150px,
     top 20px right -520px,
     top left;
+
+  @media (max-width: var.$tablet-max-width) {
+    @include mixins.centralizer;
+
+    display: block;
+  }
+
+  @media (max-width: var.$mobile-max-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (max-width: var.$slider-mobile-break-point) {
+    padding-top: 0;
+    background: var.$color-background-extra-light;
+  }
 }
 
 .about__slider {
   margin-right: 70px;
+
+  @media (max-width: var.$tablet-max-width) {
+    margin: 0 auto 50px;
+  }
 }
 
 .about__content {
@@ -57,6 +71,15 @@ $big-circle:
   flex-direction: column;
   justify-content: center;
   max-width: 380px;
+
+  @media (max-width: var.$tablet-max-width) {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: var.$mobile-max-width) {
+    @include mixins.centralizer;
+  }
 }
 
 .about__title {
@@ -64,6 +87,10 @@ $big-circle:
 
   margin: 0;
   margin-bottom: 38px;
+
+  @media (max-width: var.$tablet-max-width) {
+    text-align: center;
+  }
 }
 
 .about__text {
@@ -71,9 +98,19 @@ $big-circle:
   margin-bottom: 15px;
 
   color: var.$color-background-dark;
+
+  @media (max-width: var.$tablet-max-width) {
+    text-align: center;
+  }
 }
 
 .about__link {
   margin-top: 30px;
   margin-right: auto;
+
+  @media (max-width: var.$tablet-max-width) {
+    width: 400px;
+    margin-top: 50px;
+    margin-left: auto;
+  }
 }

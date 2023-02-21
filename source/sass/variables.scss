@@ -32,6 +32,10 @@ $mobile-max-width: $tablet-min-width - 1px;
 $mobile-min-width: 320px;
 
 // sizes
+$base-horizontal-padding: clamp(20px, 7.2vw, 98px);
+
 $card-image-size: 313px;
 $card-width: 370px;
+
 $slider-width: 521px;
+$slider-mobile-break-point: $slider-width;

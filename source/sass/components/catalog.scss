@@ -40,6 +40,7 @@
 
   @media (max-width: var.$mobile-max-width) {
     margin-right: auto;
+    margin-bottom: 0;
     order: 1;
   }
 }

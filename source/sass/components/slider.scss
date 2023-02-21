@@ -1,8 +1,20 @@
 @use "../variables" as var;
 @use "../mixins";
 
+$button-size-tablet: 65px;
+
 .slider {
   position: relative;
+  width: fit-content;
+
+  @media (max-width: var.$tablet-max-width) {
+    padding: 0 $button-size-tablet;
+    max-width: 100%;
+  }
+
+  @media (max-width: var.$slider-mobile-break-point) {
+    padding: 0;
+  }
 }
 
 .slider__list {
@@ -12,6 +24,7 @@
   flex-wrap: nowrap;
   align-items: center;
   width: var.$slider-width;
+  max-width: 100%;
   overflow: hidden;
 }
 
@@ -33,6 +46,15 @@
   align-items: center;
 
   color: var.$color-text-dark;
+
+  @media (max-width: var.$tablet-max-width) {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    justify-content: space-between;
+  }
 }
 
 .slider__counter {
@@ -41,6 +63,21 @@
     12px,
   );
   padding: 0 10px;
+
+  @media (max-width: var.$tablet-max-width) {
+    position: absolute;
+    bottom: 0;
+    right: $button-size-tablet;
+    padding: 15px 20px;
+
+    font-size: 21px;
+
+    background-color: rgba(#ffffff, 0.3);
+  }
+
+  @media (max-width: var.$slider-mobile-break-point) {
+    right: 0;
+  }
 }
 
 .slider__button {
@@ -64,5 +101,23 @@
   &:active {
     color: var.$color-text-dark;
     opacity: 0.4;
+  }
+
+  &:disabled {
+    color: var.$color-text-dark;
+    opacity: 0.2;
+    cursor: default;
+  }
+
+  @media (max-width: var.$tablet-max-width) {
+    width: $button-size-tablet;
+    height: $button-size-tablet;
+  }
+}
+
+.slider__arrow-icon {
+  @media (max-width: var.$tablet-max-width) {
+    width: $button-size-tablet - 35px;
+    height: $button-size-tablet - 35px;
   }
 }
