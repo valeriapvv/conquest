@@ -30,7 +30,7 @@ $image-base-plate: linear-gradient(to top, var.$color-background-light-1, transp
     width: 850px;
     max-width: 100%;
     margin: 0 auto;
-    padding: 50px 85px;
+    padding: 30px 85px;
 
     order: 1;
   }
@@ -88,6 +88,7 @@ $image-base-plate: linear-gradient(to top, var.$color-background-light-1, transp
   }
 
   @media (max-width: var.$mobile-max-width) {
+    font-size: 24px;
     max-width: 100%;
     text-align: start;
   }
@@ -135,8 +136,8 @@ $image-base-plate: linear-gradient(to top, var.$color-background-light-1, transp
     left: 50%;
     transform: translate(-47%, -50%);
     z-index: -1;
-    width: clamp(200px, 200vw, 990px);
-    height: clamp(200px, 200vw, 944px);
+    width: min(200vw, 990px);
+    height: min(200vw, 944px);
     border-radius: 50%;
     background-image:
       linear-gradient(to right, transparent 500px, #ffffff 500px),

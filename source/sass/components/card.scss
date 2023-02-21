@@ -5,9 +5,11 @@ $text-horizontal-padding: 12px;
 $line-bar-width: 30px;
 $line-bar-offset: $line-bar-width + $text-horizontal-padding;
 
-$base-plate-size: 313px;
+$base-plate-size: 100%;
 
 .card {
+  width: var.$card-width;
+  max-width: 100%;
   padding: 40px 28px;
 
   @include mixins.font(
@@ -17,6 +19,34 @@ $base-plate-size: 313px;
   );
 
   background-color: var.$color-background-extra-light;
+
+  @media (max-width: var.$tablet-max-width) {
+    width: 100%;
+    max-width: var.$card-image-size;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (max-width: var.$mobile-max-width) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 100vw;
+      height: 1px;
+
+      background-color: rgba(var.$color-background-light-2, 0.5);
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
 }
 
 .card__title {
@@ -37,8 +67,13 @@ $base-plate-size: 313px;
 
 .card__image-link {
   position: relative;
-  display: block;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: var.$card-image-size;
+  max-width: 100%;
+  margin: 0 auto 20px;
 
   &::before,
   &::after {
@@ -58,7 +93,7 @@ $base-plate-size: 313px;
   }
 
   &::after {
-    $inner-plate-size: $base-plate-size - 3px;
+    $inner-plate-size: calc($base-plate-size - 3px);
     width: $inner-plate-size;
     height: $inner-plate-size;
     background-color: var.$color-background-extra-light;
