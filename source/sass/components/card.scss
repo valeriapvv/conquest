@@ -25,6 +25,7 @@ $base-plate-size: 100%;
     max-width: var.$card-image-size;
     padding-left: 0;
     padding-right: 0;
+    background-color: #ffffff;
   }
 
   @media (max-width: var.$mobile-max-width) {
@@ -104,6 +105,12 @@ $base-plate-size: 100%;
       opacity: 0.6;
       width: $base-plate-size;
       height: $base-plate-size;
+    }
+  }
+
+  @media (max-width: var.$tablet-max-width) {
+    &::after {
+      background-color: #ffffff;
     }
   }
 }

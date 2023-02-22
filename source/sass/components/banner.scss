@@ -12,6 +12,8 @@ $image-base-plate: linear-gradient(to top, var.$color-background-light-1, transp
   @media (max-width: var.$tablet-max-width) {
     display: flex;
     flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -22,6 +24,8 @@ $image-base-plate: linear-gradient(to top, var.$color-background-light-1, transp
   justify-content: center;
 
   @media (max-width: var.$tablet-max-width) {
+    @include mixins.centralizer;
+
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
@@ -30,14 +34,13 @@ $image-base-plate: linear-gradient(to top, var.$color-background-light-1, transp
     width: 850px;
     max-width: 100%;
     margin: 0 auto;
-    padding: 30px 85px;
+    padding-left: 85px;
 
     order: 1;
   }
 
   @media (max-width: var.$mobile-max-width) {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: var.$base-horizontal-padding;
   }
 }
 
@@ -58,7 +61,7 @@ $image-base-plate: linear-gradient(to top, var.$color-background-light-1, transp
     max-width: 45%;
     margin-bottom: 40px;
 
-    font-size: 30px;
+    font-size: 36px;
   }
 
   @media (max-width: var.$mobile-max-width) {

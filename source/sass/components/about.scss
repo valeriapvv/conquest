@@ -3,8 +3,8 @@
 
 // Градиентый фон и круги
 $background-gradiend: linear-gradient(to right,
-    var.$color-background-light-3 468px,
-    var.$color-background-extra-light 468px,
+    var.$color-background-light-3 min(65%, 468px),
+    var.$color-background-extra-light min(65%, 468px),
   );
 
 $background-small-circle-size: 366px;

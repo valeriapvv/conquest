@@ -7,13 +7,26 @@
   line-height: 1.2;
 
   background-color: var.$color-background-dark;
+
+  @media (max-width: var.$tablet-max-width) {
+    font-size: 16px;
+  }
 }
 
 .footer__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, auto));
+  gap: 50px;
+  justify-content: space-between;
+
   padding: 73px 185px 67px;
 
-  display: flex;
-  justify-content: space-between;
+  @media (max-width: var.$tablet-max-width) {
+    padding: 50px 85px;
+
+    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+    justify-content: center;
+  }
 }
 
 .footer__logo {

@@ -1,6 +1,8 @@
+@use "../variables" as var;
 @use "../mixins";
 
 .links-group__title {
+  max-width: 210px;
   margin: 0;
   margin-bottom: 33px;
   padding-top: 6px;
@@ -9,6 +11,15 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #ffffff;
+
+  @media (max-width: var.$tablet-max-width) {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+
+  @media (max-width: var.$mobile-max-width) {
+    padding-top: 0;
+  }
 }
 
 .links-group__list {

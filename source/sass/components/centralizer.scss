@@ -2,8 +2,8 @@
 @use "../mixins";
 
 .centralizer {
-  width: 100%;
-  max-width: var.$desktop-max-width;
+  width: var.$desktop-max-width;
+  max-width: 100%;
 
   @include mixins.centralizer;
 }
