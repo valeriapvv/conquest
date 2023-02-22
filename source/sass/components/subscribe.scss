@@ -80,7 +80,7 @@ $gallery-width: 630px;
   }
 }
 
-.subscribe__gallary {
+.subscribe__gallery {
   @include mixins.list-style-reset;
 
   display: grid;

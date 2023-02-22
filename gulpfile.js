@@ -48,10 +48,16 @@ const scripts = () => {
 
 // Images
 
-export const optimizeImages = () => {
+const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}', {base: 'source/img'})
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
+}
+
+export const optimizeSourceImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}', {base: 'source/img'})
+    .pipe(squoosh())
+    .pipe(gulp.dest('source/img'))
 }
 
 const copyImages = () => {
@@ -101,6 +107,21 @@ const svg = () => {
       ]
     }))
     .pipe(gulp.dest('build/img'))
+}
+
+export const svgSource = () => {
+  return gulp.src([
+    'source/img/**/*.svg',
+    '!source/img/icons/*.svg',
+  ], {base: 'source/img'})
+    .pipe(svgo({
+      plugins: [
+        {
+          removeViewBox: false,
+        }
+      ]
+    }))
+    .pipe(gulp.dest('source/img'))
 }
 
 const sprite = () => {
@@ -176,7 +197,7 @@ export const build = gulp.series(
     scripts,
     svg,
     sprite,
-    webp,
+    // webp,
   ),
   gulp.series(
     server,
