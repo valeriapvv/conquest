@@ -13,6 +13,13 @@ import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
 
+const ghPages = require('gh-pages');
+const path = require('path');
+
+export const deploy = (cb) => {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+
 // Styles
 
 export const styles = () => {
