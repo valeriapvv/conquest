@@ -12,9 +12,8 @@ import svgo from 'gulp-svgo';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
-
-const ghPages = require('gh-pages');
-const path = require('path');
+import path from 'path';
+import ghPages from 'gh-pages';
 
 export const deploy = (cb) => {
   ghPages.publish(path.join(process.cwd(), './build'), cb);
